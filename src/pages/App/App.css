@@ -13,6 +13,12 @@
   }
 }
 
+.gallery {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33.333%;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

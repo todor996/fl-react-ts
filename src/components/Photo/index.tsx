@@ -7,9 +7,10 @@ type PhotoProps = {
     top: number;
     left: number;
     key: number;
+    onClick: any;
 };
 
-const Photo: React.FC<PhotoProps> = ({ photo, margin, direction, top, left, key }: PhotoProps) => {
+const Photo: React.FC<PhotoProps> = ({ photo, margin, direction, top, left, key, onClick }: PhotoProps) => {
     const imgStyle: imageStyle = { margin: margin, display: 'block' };
     if (direction === 'column') {
         imgStyle.left = left;
@@ -21,6 +22,7 @@ const Photo: React.FC<PhotoProps> = ({ photo, margin, direction, top, left, key 
             key={key}
             style={imgStyle}
             {...photo}
+            onClick={onClick}
         />
     );
 };
